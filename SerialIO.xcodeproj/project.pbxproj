@@ -1,0 +1,281 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5337AE210F854B63000D4500 /* SerialIO in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8DD76FB20486AB0100D96B5E /* SerialIO */; };
+		5337AE360F854BE3000D4500 /* init.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5337ADE20F8547E3000D4500 /* init.m */; };
+		5337AEAE0F85511E000D4500 /* SerialPort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5337AEAC0F85511E000D4500 /* SerialPort.cpp */; };
+		FFD708650EE669A60026C014 /* SerialIO.tm in Sources */ = {isa = PBXBuildFile; fileRef = FFD708640EE669A60026C014 /* SerialIO.tm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		5337AD3F0F85239E000D4500 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			filePatterns = "*.tm";
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+				"${INPUT_FILE_DIR}/${INPUT_FILE_BASE}.tm.cpp",
+			);
+			script = "#!/bin/sh\n${MLDK}/mprep ${INPUT_FILE_PATH} > ${INPUT_FILE_DIR}/${INPUT_FILE_BASE}.tm.cpp";
+		};
+/* End PBXBuildRule section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5337AE260F854BA3000D4500 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Package/SerialIO/MacOSX;
+			dstSubfolderSpec = 16;
+			files = (
+				5337AE210F854B63000D4500 /* SerialIO in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5337AE270F854BA3000D4500 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Package/SerialIO/Kernel;
+			dstSubfolderSpec = 16;
+			files = (
+				5337AE360F854BE3000D4500 /* init.m in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5337ADE20F8547E3000D4500 /* init.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = init.m; sourceTree = "<group>"; };
+		5337AEAC0F85511E000D4500 /* SerialPort.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SerialPort.cpp; sourceTree = "<group>"; };
+		5337AEAD0F85511E000D4500 /* SerialPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SerialPort.h; sourceTree = "<group>"; };
+		8DD76FB20486AB0100D96B5E /* SerialIO */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SerialIO; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFD708640EE669A60026C014 /* SerialIO.tm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SerialIO.tm; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DD76FAD0486AB0100D96B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* SerialIO */ = {
+			isa = PBXGroup;
+			children = (
+				08FB7795FE84155DC02AAC07 /* Source */,
+				5337ADE10F8547D1000D4500 /* Package Files */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = SerialIO;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				FFD708640EE669A60026C014 /* SerialIO.tm */,
+				5337AEAC0F85511E000D4500 /* SerialPort.cpp */,
+				5337AEAD0F85511E000D4500 /* SerialPort.h */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DD76FB20486AB0100D96B5E /* SerialIO */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5337ADE10F8547D1000D4500 /* Package Files */ = {
+			isa = PBXGroup;
+			children = (
+				5337ADE20F8547E3000D4500 /* init.m */,
+			);
+			name = "Package Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8DD76FA90486AB0100D96B5E /* SerialIO */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB928508733DD80010E9CD /* Build configuration list for PBXNativeTarget "SerialIO" */;
+			buildPhases = (
+				8DD76FAB0486AB0100D96B5E /* Sources */,
+				8DD76FAD0486AB0100D96B5E /* Frameworks */,
+				5337AE260F854BA3000D4500 /* CopyFiles */,
+				5337AE270F854BA3000D4500 /* CopyFiles */,
+				5337AE250F854B85000D4500 /* ShellScript */,
+			);
+			buildRules = (
+				5337AD3F0F85239E000D4500 /* PBXBuildRule */,
+			);
+			dependencies = (
+			);
+			name = SerialIO;
+			productInstallPath = "$(HOME)/bin";
+			productName = SerialIO;
+			productReference = 8DD76FB20486AB0100D96B5E /* SerialIO */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "SerialIO" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* SerialIO */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DD76FA90486AB0100D96B5E /* SerialIO */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5337AE250F854B85000D4500 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "rm -f ${TARGET_BUILD_DIR}/Package/SerialIO/Darwin\nrm -f ${TARGET_BUILD_DIR}/Package/SerialIO/MacOSX-PowerPC64\nrm -f ${TARGET_BUILD_DIR}/Package/SerialIO/MacOSX-x86\nrm -f ${TARGET_BUILD_DIR}/Package/SerialIO/MacOSX-x86-64\ncp -r ${TARGET_BUILD_DIR}/Package/SerialIO/MacOSX ${TARGET_BUILD_DIR}/Package/SerialIO/Darwin\ncp -r ${TARGET_BUILD_DIR}/Package/SerialIO/MacOSX ${TARGET_BUILD_DIR}/Package/SerialIO/MacOSX-PowerPC64\ncp -r ${TARGET_BUILD_DIR}/Package/SerialIO/MacOSX ${TARGET_BUILD_DIR}/Package/SerialIO/MacOSX-x86\ncp -r ${TARGET_BUILD_DIR}/Package/SerialIO/MacOSX ${TARGET_BUILD_DIR}/Package/SerialIO/MacOSX-x86-64";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DD76FAB0486AB0100D96B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFD708650EE669A60026C014 /* SerialIO.tm in Sources */,
+				5337AEAE0F85511E000D4500 /* SerialPort.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB928608733DD80010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					"${MLDK}",
+				);
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					"${MLDK}",
+				);
+				MATHEMATICA = /Applications/Mathematica.app;
+				MLDK = "${MATHEMATICA}/SystemFiles/Links/MathLink/DeveloperKit/CompilerAdditions/";
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-lMLi3",
+				);
+				PRODUCT_NAME = SerialIO;
+			};
+			name = Debug;
+		};
+		1DEB928708733DD80010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					"${MLDK}",
+				);
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					"${MLDK}",
+				);
+				MATHEMATICA = /Applications/Mathematica.app;
+				MLDK = "${MATHEMATICA}/SystemFiles/Links/MathLink/DeveloperKit/CompilerAdditions/";
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-lMLi3",
+				);
+				PRODUCT_NAME = SerialIO;
+			};
+			name = Release;
+		};
+		1DEB928A08733DD80010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Debug;
+		};
+		1DEB928B08733DD80010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB928508733DD80010E9CD /* Build configuration list for PBXNativeTarget "SerialIO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB928608733DD80010E9CD /* Debug */,
+				1DEB928708733DD80010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "SerialIO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB928A08733DD80010E9CD /* Debug */,
+				1DEB928B08733DD80010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}
