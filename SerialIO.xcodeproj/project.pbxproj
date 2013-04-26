@@ -10,6 +10,7 @@
 		5337AE210F854B63000D4500 /* SerialIO in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8DD76FB20486AB0100D96B5E /* SerialIO */; };
 		5337AE360F854BE3000D4500 /* init.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5337ADE20F8547E3000D4500 /* init.m */; };
 		5337AEAE0F85511E000D4500 /* SerialPort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5337AEAC0F85511E000D4500 /* SerialPort.cpp */; };
+		537C8958172AE7FC00588A4D /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 537C8957172AE7FC00588A4D /* CoreFoundation.framework */; };
 		FFD708650EE669A60026C014 /* SerialIO.tm in Sources */ = {isa = PBXBuildFile; fileRef = FFD708640EE669A60026C014 /* SerialIO.tm */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		5337ADE20F8547E3000D4500 /* init.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = init.m; sourceTree = "<group>"; };
 		5337AEAC0F85511E000D4500 /* SerialPort.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SerialPort.cpp; sourceTree = "<group>"; };
 		5337AEAD0F85511E000D4500 /* SerialPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SerialPort.h; sourceTree = "<group>"; };
+		537C8957172AE7FC00588A4D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = ../../../System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<group>"; };
 		8DD76FB20486AB0100D96B5E /* SerialIO */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SerialIO; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFD708640EE669A60026C014 /* SerialIO.tm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SerialIO.tm; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -63,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				537C8958172AE7FC00588A4D /* CoreFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +75,7 @@
 		08FB7794FE84155DC02AAC07 /* SerialIO */ = {
 			isa = PBXGroup;
 			children = (
+				537C8957172AE7FC00588A4D /* CoreFoundation.framework */,
 				08FB7795FE84155DC02AAC07 /* Source */,
 				5337ADE10F8547D1000D4500 /* Package Files */,
 				1AB674ADFE9D54B511CA2CBB /* Products */,
@@ -136,7 +140,11 @@
 			isa = PBXProject;
 			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "SerialIO" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 08FB7794FE84155DC02AAC07 /* SerialIO */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -193,7 +201,7 @@
 					"${MLDK}",
 				);
 				MATHEMATICA = /Applications/Mathematica.app;
-				MLDK = "${MATHEMATICA}/SystemFiles/Links/MathLink/DeveloperKit/CompilerAdditions/";
+				MLDK = "${MATHEMATICA}/SystemFiles/Links/MathLink/DeveloperKit/MacOSX-x86-64/CompilerAdditions/";
 				OTHER_LDFLAGS = (
 					"-lstdc++",
 					"-lMLi3",
@@ -217,7 +225,7 @@
 					"${MLDK}",
 				);
 				MATHEMATICA = /Applications/Mathematica.app;
-				MLDK = "${MATHEMATICA}/SystemFiles/Links/MathLink/DeveloperKit/CompilerAdditions/";
+				MLDK = "${MATHEMATICA}/SystemFiles/Links/MathLink/DeveloperKit/MacOSX-x86-64/CompilerAdditions/";
 				OTHER_LDFLAGS = (
 					"-lstdc++",
 					"-lMLi3",
@@ -229,28 +237,26 @@
 		1DEB928A08733DD80010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
-				SDKROOT = macosx10.5;
 			};
 			name = Debug;
 		};
 		1DEB928B08733DD80010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PREBINDING = NO;
-				SDKROOT = macosx10.5;
 			};
 			name = Release;
 		};
